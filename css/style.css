@@ -1,0 +1,318 @@
+/* ==================================== */
+/* 0. DEFINIÇÃO DE VARIÁVEIS (PALETA) */
+/* ==================================== */
+:root {
+    --cor-primaria: #007bff;     
+    --cor-secundaria: #004d99;   
+    --cor-acento: #ffc107;       
+    
+    --fundo-claro: #f8f8f8;      
+    --fundo-escuro: #222;        
+    --texto-escuro: #333;        
+    --texto-claro: white;        
+}
+
+/* ==================================== */
+/* 1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;        
+    background-color: var(--fundo-claro); 
+    color: var(--texto-escuro); 
+    min-height: 100vh; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--cor-primaria); 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
+}
+
+/* ==================================== */
+/* 2. LAYOUT MOBILE-FIRST (Estilos Padrão) */
+/* ==================================== */
+
+/* Container Principal */
+main, header, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-secundaria); 
+    color: var(--texto-claro);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+}
+
+header nav a {
+    color: var(--texto-claro); /* GARANTE QUE OS LINKS DO HEADER SEJAM BRANCOS */
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* Conteúdo (Sections) */
+main section {
+    padding: 2rem 1rem; 
+    border-bottom: 1px solid #eee;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--cor-primaria);
+}
+
+/* Footer */
+footer {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--cor-primaria);
+}
+
+/* ==================================== */
+/* 3. ESTILIZAÇÃO DO BANNER E BOTÕES */
+/* ==================================== */
+
+#hero-banner {
+    background-color: #e0f7fa; 
+    padding: 3rem 1rem;
+    text-align: center;
+    border-radius: 8px; 
+    margin-bottom: 2rem;
+}
+
+/* Botões (CTAs) */
+.btn-primary, #hero-banner a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--cor-primaria); 
+    color: var(--texto-claro);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px; 
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover, #hero-banner a:hover {
+    background-color: #0056b3; 
+    text-decoration: none;
+}
+
+/* Botão Secundário */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d; 
+    color: var(--texto-claro);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    border: none;
+}
+
+/* ==================================== */
+/* 4. ESTILIZAÇÃO DA PÁGINA DE PROJETOS */
+/* ==================================== */
+
+/* Container para Projetos Ativos (o div #projetos-cards é o flexbox) */
+#projetos-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+/* Estilo para cada ARTIGO de Projeto */
+#projetos-cards article {
+    background-color: var(--texto-claro); 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para figure (com ou sem múltiplas imagens) */
+#projetos-cards figure {
+    margin-bottom: 1rem;
+}
+
+#projetos-cards figure img {
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* Estilo para Lista de Definição (Detalhes) */
+#projetos-cards dl {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+#projetos-cards dt {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+/* ==================================== */
+/* 5. ESTILIZAÇÃO DE FORMULÁRIOS (cadastro.html) */
+/* ==================================== */
+
+form {
+    max-width: 600px; 
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: var(--texto-claro);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    padding: 0 10px;
+}
+
+label {
+    display: block; 
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--texto-escuro);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--cor-primaria); 
+    outline: none; 
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto; 
+    margin-right: 0.5rem;
+}
+
+form button {
+    margin-top: 2rem;
+}
+
+
+/* ==================================== */
+/* 6. MEDIA QUERIES PARA RESPONSIVIDADE (Desktop/Tablet) */
+/* ==================================== */
+
+@media (min-width: 768px) {
+    
+    /* Largura máxima centralizada */
+    main, header, footer {
+        max-width: 1200px;
+        padding: 1rem 2rem;
+    }
+    
+    /* Layout do Header (Desktop: em linha) */
+    header {
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+
+    header nav ul {
+        flex-direction: row; 
+    }
+    
+    /* Layout dos Projetos em Colunas */
+    #projetos-cards {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: space-between;
+    }
+
+    #projetos-cards article {
+        width: 48%; 
+    }
+
+    /* Estilo para que as imagens no FIGURE fiquem lado a lado no desktop */
+    #projetos-cards article figure {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    #projetos-cards article figure img {
+        /* Garante que duas imagens caibam lado a lado na coluna de 48% (se houver duas imagens) */
+        width: calc(50% - 5px); 
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | ONG Solidária</title>
+    <meta name="description" content="Formulário de cadastro completo para voluntariado, doação e recebimento de newsletter da ONG Solidária.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo_final.png" alt="Logotipo da ONG Solidária" style="max-width: 100px;">
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Cadastro/Doação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Junte-se a Nós! Cadastro de Apoio</h1>
+        <p>Preencha o formulário abaixo para se voluntariar, fazer uma doação ou apenas receber nossas novidades. Todos os campos com * são obrigatórios.</p>
+
+        <form action="/processar-cadastro" method="post">
+            <fieldset>
+                <legend>Dados Pessoais *</legend>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required minlength="5" maxlength="100">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com.br" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="999.999.999-99" required 
+                       pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}" 
+                       title="CPF no formato 999.999.999-99" maxlength="14">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required 
+                       pattern="^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$" 
+                       title="Telefone no formato (99) 99999-9999" maxlength="15">
+                
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço *</legend>
+                
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="99999-999" required 
+                       pattern="[0-9]{5}-?[0-9]{3}" 
+                       title="CEP no formato 99999-999" maxlength="9">
+
+                <label for="endereco">Endereço (Rua, Número, Complemento):</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua ABC, 123" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+                
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Seu Interesse Principal</legend>
+                <input type="radio" id="interesse-voluntario" name="interesse" value="voluntario" required>
+                <label for="interesse-voluntario">Quero ser Voluntário</label><br>
+                
+                <input type="radio" id="interesse-doador" name="interesse" value="doador">
+                <label for="interesse-doador">Quero Fazer uma Doação</label><br>
+                
+                <input type="radio" id="interesse-novidades" name="interesse" value="novidades">
+                <label for="interesse-novidades">Apenas Receber Novidades (Newsletter)</label>
+            </fieldset>
+
+            <label>
+                <input type="checkbox" name="termos" required>
+                Li e aceito os termos de privacidade e uso de dados. *
+            </label>
+            
+            <button type="submit" class="btn-primary">Enviar Cadastro</button>
+            <button type="reset" class="btn-secondary">Limpar Formulário</button>
+        </form>
+    </main>
+
+    <footer>
+        <section>
+            <h3>Informações de Contato</h3>
+            <address>
+                <p>E-mail: <a href="mailto:contato@ong.org">contato@ong.org</a></p>
+                <p>Telefone: <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+            </address>
+        </section>
+        <section>
+            <h3>Links e Direitos</h3>
+            <nav aria-label="Navegação Secundária">
+                <ul>
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2025 ONG Solidária. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>
