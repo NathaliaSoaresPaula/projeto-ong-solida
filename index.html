@@ -9,78 +9,92 @@
 </head>
 <body>
     <header>
-        <img src="assets/images/logo_final.png" alt="Logotipo da ONG Solidária" style="max-width: 100px;">
-        <nav aria-label="Navegação Principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos Sociais</a></li>
-                <li><a href="cadastro.html">Cadastro/Doação</a></li>
-            </ul>
-        </nav>
+        <div class="container header-content"> 
+            <img src="assets/images/logo_final.png" alt="Logotipo da ONG Solidária">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </label>
+            <nav aria-label="Navegação Principal" class="menu-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos Sociais</a></li>
+                    <li><a href="cadastro.html">Cadastro/Doação</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero-banner">
-            <h1>Transformando Vidas Através da Solidariedade</h1>
-            <img src="assets/images/banner.jpg" alt="Foto de voluntários e beneficiários sorrindo." style="max-width: 100%; display: block; margin: 1rem auto;">
-            <p>Conheça nossa missão e faça parte dessa corrente do bem.</p>
-            <a href="cadastro.html" class="btn-primary">Seja um Voluntário ou Doar Agora</a>
-        </section>
+        <div class="container">
+            <section id="hero-banner">
+                <h1>Transformando Vidas Através da Solidariedade</h1>
+                <img src="assets/images/banner.jpg" alt="Foto de voluntários e beneficiários sorrindo;">
+                <p>Conheça nossa missão e faça parte dessa corrente do bem.</p>
+                <a href="cadastro.html" class="btn-primary">Seja um Voluntário ou Doar Agora</a>
+                <p id="progresso-doacao" style="margin-top: 1rem; font-weight: bold; color: var(--cor-secundaria);"></p>
+            </section>
 
-        <section id="missao-valores">
-            <h2>Nossa Missão e Valores</h2>
-            <article>
-                <h3>Missão</h3>
-                <p>Promover a inclusão social e educacional de comunidades carentes, garantindo oportunidades e dignidade a todos.</p>
-            </article>
-            <article>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Transparência total na aplicação de recursos.</li>
-                    <li>Empatia e respeito em todas as interações.</li>
-                    <li>Comprometimento com o impacto social duradouro.</li>
-                </ul>
-            </article>
-        </section>
+            <section id="missao-valores">
+                <h2>Nossa Missão e Valores</h2>
+                <div class="alert alert-sucesso">Seja bem-vindo(a)! Conheça nosso relatório anual de transparência.</div>
+                <article>
+                    <h3>Missão</h3>
+                    <p>Promover a inclusão social e educacional de comunidades carentes, garantindo oportunidades e dignidade a todos.</p>
+                </article>
+                <article>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Transparência total na aplicação de recursos.</li>
+                        <li>Empatia e respeito em todas as interações.</li>
+                        <li>Comprometimento com o impacto social duradouro.</li>
+                    </ul>
+                </article>
+            </section>
 
-        <section id="ultimos-projetos">
-            <h2>Projetos em Destaque</h2>
-            <figure>
-                <img src="assets/images/projeto-educacao.jpg" alt="Crianças estudando em sala de aula do projeto." style="max-width: 300px;">
-                <figcaption>Projeto Educação Para o Futuro: Oferecendo aulas de reforço e tecnologia.</figcaption>
-            </figure>
-            <p>Clique abaixo para conhecer todos os nossos projetos ativos e concluídos.</p>
-            <a href="projetos.html" class="btn-secondary">Veja Todos os Projetos</a>
-        </section>
+            <section id="ultimos-projetos">
+                <h2>Projetos em Destaque</h2>
+                <figure>
+                    <img src="assets/images/projeto-educacao.jpg" alt="Crianças estudando em sala de aula do projeto.">
+                    <figcaption>Projeto Educação Para o Futuro: Oferecendo aulas de reforço e tecnologia.</figcaption>
+                </figure>
+                <p>Clique abaixo para conhecer todos os nossos projetos ativos e concluídos.</p>
+                <a href="projetos.html" class="btn-secondary">Veja Todos os Projetos</a>
+            </section>
 
-        <section id="contato-destaque">
-            <h2>Fale Conosco</h2>
-            <p>Estamos sempre disponíveis para tirar dúvidas e receber sugestões. Visite-nos ou entre em contato:</p>
-            <address>
-                <p>Localização: Rua da Solidariedade, 123 - Bairro Esperança - Cidade/UF</p>
-                <img src="assets/images/mapa-placeholder.png" alt="Localização da sede da ONG no mapa." style="max-width: 200px;" aria-hidden="true">
-            </address>
-        </section>
+            <section id="contato-destaque">
+                <h2>Fale Conosco</h2>
+                <p>Estamos sempre disponíveis para tirar dúvidas e receber sugestões. Visite-nos ou entre em contato:</p>
+                <address>
+                    <p>Localização: Rua da Solidariedade, 123 - Bairro Esperança - Cidade/UF</p>
+                    <img src="assets/images/mapa-placeholder.png" alt="Localização da sede da ONG no mapa." aria-hidden="true">
+                </address>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <section>
-            <h3>Informações de Contato</h3>
-            <address>
-                <p>E-mail: <a href="mailto:contato@ong.org">contato@ong.org</a></p>
-                <p>Telefone: <a href="tel:+5511987654321">(11) 98765-4321</a></p>
-            </address>
-        </section>
-        <section>
-            <h3>Links e Direitos</h3>
-            <nav aria-label="Navegação Secundária">
-                <ul>
-                    <li><a href="#">Transparência</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-            </nav>
-            <p>&copy; 2025 ONG Solidária. Todos os direitos reservados.</p>
-        </section>
+        <div class="container">
+            <section>
+                <h3>Informações de Contato</h3>
+                <address>
+                    <p>E-mail: <a href="mailto:contato@ong.org">contato@ong.org</a></p>
+                    <p>Telefone: <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+                </address>
+            </section>
+            <section>
+                <h3>Links e Direitos</h3>
+                <nav aria-label="Navegação Secundária">
+                    <ul>
+                        <li><a href="#">Transparência</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </nav>
+                <p>&copy; 2025 ONG Solidária. Todos os direitos reservados.</p>
+            </section>
+        </div>
     </footer>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
